@@ -1,0 +1,28 @@
+Регистрация/авторизация
+Модель постбеков
+Контроллер принимающий постбеки
+Табличный вывод итоговой таблицы постбеков
+RestApi Контроллер возвращающий итоговую таблцу постбеков
+
+Запросы на прием постбеков должны быть авторизованы?
+Если авторизованы, то какой способ авторизации
+
+Модель постбеков 
+cid->string
+campaign_id->int
+time->timestamp
+sub1->string
+event->string
+
+Итоговая таблица
+Id->OrderBy(campaign_id)
+CLicks->where event='click'
+Installs->where event='install'
+Trials->where event='trial'
+CRi->Installs/CLicks
+CRti->Installs/Trials
+
+
+БД test_postback
+root
+root
